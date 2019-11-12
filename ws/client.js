@@ -1,9 +1,8 @@
 const mqtt = require('mqtt');
-require('dotenv').config();
+const config=require('./config/config');
 
 const clientId = 'mqttws_' + Math.random().toString(16).substr(2, 8)
-const host = 'wss://58.114.96.96/mqtt'
-console.log(process.env['CHRIS'])
+const host = config.wsHost
 var options = {
     keepalive: 60,
     clientId: clientId,
@@ -18,8 +17,8 @@ var options = {
         qos: 0,
         retain: false
     },
-    username: process.env['USERNAME'],
-    password: process.env['PASSWORD'],
+    username: config.wsUsername,
+    password: config.wsPassword,
     rejectUnauthorized: false
 }
 
