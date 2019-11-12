@@ -1,8 +1,8 @@
 const mosca = require('mosca');
 const config=require('./config/config');
 
-const wsPort = 3001;
-const tcpPort = 3003; //mqtt 1883
+const wsPort = 8883;
+const tcpPort = 1883; //mqtt 1883
 const MqttWsServer = new mosca.Server({
     port:tcpPort,
     http: {
