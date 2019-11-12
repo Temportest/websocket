@@ -2,7 +2,9 @@ const mqtt = require('mqtt');
 const config=require('./config/config');
 
 const clientId = 'mqttws_' + Math.random().toString(16).substr(2, 8)
-const host = config.wsHost
+// const host = config.wsHost
+const host='http://127.0.0.1:3003'
+const host='mqtt://127.0.0.1' // when tcpPort=1883
 var options = {
     keepalive: 60,
     clientId: clientId,
