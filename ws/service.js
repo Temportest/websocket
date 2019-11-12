@@ -1,5 +1,5 @@
 const mosca = require('mosca');
-require('dotenv').config();
+const config=require('./config/config');
 
 const wsPort = 3001;
 const tcpPort = 3003;
@@ -20,11 +20,10 @@ MqttWsServer.on("published", (packet,client) => {
         console.log('ws:'+client.id + '發佈主題:' + packet.topic + ',內容:' + packet.payload.toString());
     }
 });
-
 // Accepts the connection if the username and password are valid
 var authenticate = function(client, username, password, callback) {
     console.log(username,password.toString())
-    var authorized = (username === 'publicuser' && password.toString() === 'Id0K5fHBy65p');
+    var authorized = (username === config.wsUsername && password.toString() === config.wsPassword);
     if (authorized) client.user = username;
     callback(null, authorized);
   }

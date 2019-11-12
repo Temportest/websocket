@@ -8,7 +8,7 @@ const envVarSchema = Joi.object().keys({
       'NODE_ENV',
       {
         is: Joi.string().equal('production'),
-        then: Joi.string().default(process.env['DEV_HOST']),
+        then: Joi.string().default(process.env['PDU_HOST']),
         otherwise: Joi.string().default(process.env['DEV_HOST'])
       },
     ),
@@ -16,7 +16,7 @@ const envVarSchema = Joi.object().keys({
         'NODE_ENV',
         {
           is: Joi.string().equal('production'),
-          then: Joi.string().default(process.env['DEV_USERNAME']),
+          then: Joi.string().default(process.env['PDU_USERNAME']),
           otherwise: Joi.string().default(process.env['DEV_USERNAME'])
         },
       ),
@@ -24,7 +24,7 @@ const envVarSchema = Joi.object().keys({
         'NODE_ENV',
         {
           is: Joi.string().equal('production'),
-          then: Joi.string().default(process.env['DEV_PASSWORD']),
+          then: Joi.string().default(process.env['PDU_PASSWORD']),
           otherwise: Joi.string().default(process.env['DEV_PASSWORD'])
         },
       )

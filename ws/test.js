@@ -1,8 +1,8 @@
 const mqtt = require('mqtt');
-require('dotenv').config();
+const config=require('./config/config');
 
 const clientId = 'mqttws_' + Math.random().toString(16).substr(2, 8)
-const host = 'wss://58.114.96.96/mqtt'
+const host = config.wsHost
 var options = {
     keepalive: 60,
     clientId: clientId,
@@ -17,8 +17,8 @@ var options = {
         qos: 0,
         retain: false
     },
-    username: 'publicuser',
-    password: 'Id0K5fHBy65p',
+    username: config.wsUsername,
+    password: config.wsPassword,
     rejectUnauthorized: false
 }
 
@@ -32,7 +32,8 @@ client.on('error', function (err) {
 client.on('connect', function () {
     client.publish('oase', 'on', { qos: 0, retain: false })
     console.log('client connected:' + clientId)
-    // client.end()
+    
+    setTimeout(()=>{client.end()}, 1000);
 })
 
 

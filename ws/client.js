@@ -35,10 +35,8 @@ client.on('connect', function () {
 
 client.subscribe('oase', { qos: 0 })
 
-client.publish('oase', 'ws connection demo...!', { qos: 0, retain: false })
-
 client.on('message', function (topic, message, packet) {
-    console.log('Received Message:' + message.toString() + '\nOn topic:= ' + topic)
+    console.log('Received Message:' + message.toString() + '  On topic:= ' + topic)
 })
 
 client.on('close', function () {
