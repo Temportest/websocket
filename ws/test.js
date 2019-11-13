@@ -32,7 +32,7 @@ client.on('error', function (err) {
 })
 
 client.on('connect', function () {
-    client.publish('oase', 'on', { qos: 0, retain: false })
+    client.publish('fml', '9', { qos: 0, retain: false })
     console.log('client connected:' + clientId)
     
     setTimeout(()=>{client.end()}, 1000);
