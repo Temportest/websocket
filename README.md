@@ -34,4 +34,4 @@ http://127.0.0.1:1883  或是 mqtt://127.0.0.1
 - [MQTT協議](https://www.twblogs.net/a/5db49906bd9eee310ee6bae1)
 
 - [Web:Bit](https://webbit.webduino.io/blockly/?demo=default#lRQ2LLN26jDqG)
-- [Kebbi version](https://testkebbi.webduino.tw/blockly/?demo=default)
+- [Kebbi version](https://testkebbi.webduino.tw/blockly/?demo=default#a355aaKKjOm3m)
