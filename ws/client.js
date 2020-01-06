@@ -35,7 +35,7 @@ client.on('connect', function () {
     console.log('client connected:' + clientId)
 })
 
-client.subscribe('oase', { qos: 0 })
+client.subscribe('fml', { qos: 0 })
 
 client.on('message', function (topic, message, packet) {
     console.log('Received Message:' + message.toString() + '  On topic:= ' + topic)
