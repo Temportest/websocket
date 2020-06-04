@@ -4,6 +4,7 @@ const config=require('./config/config');
 const clientId = 'mqttws_' + Math.random().toString(16).substr(2, 8)
 const host = config.wsHost
 // const host='ws://127.0.0.1:8001'
+console.log(host)
 
 var options = {
     keepalive: 60,

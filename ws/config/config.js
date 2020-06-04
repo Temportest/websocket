@@ -6,7 +6,7 @@ const envVarSchema = Joi.object().keys({
     NODE_ENV: Joi.string().default('development').allow(['development', 'production']), // 字串且預設值為development 並只允許兩種參數
     WS_HOST: Joi.string()
     .when(
-      'NODE_ENV', { is: 'development', then: Joi.string().default(process.env['PDU_HOST']) }
+      'NODE_ENV', { is: 'development', then: Joi.string().default(process.env['DEV_HOST']) }
       )
     .when(
       'NODE_ENV', { is: 'WEBDUINO', then: Joi.string().default(process.env['WEBDUINO_HOST']) }
@@ -16,7 +16,7 @@ const envVarSchema = Joi.object().keys({
     ),
     WS_USERNAME: Joi.string()
     .when(
-      'NODE_ENV', { is: 'development', then: Joi.string().default(process.env['PDU_USERNAME']) }
+      'NODE_ENV', { is: 'development', then: Joi.string().default(process.env['DEV_USERNAME']) }
       )
     .when(
       'NODE_ENV', { is: 'WEBDUINO', then: Joi.string().default(process.env['WEBDUINO_USERNAME']) }
@@ -26,7 +26,7 @@ const envVarSchema = Joi.object().keys({
     ),
       WS_PASSWORD: Joi.string()
       .when(
-        'NODE_ENV', { is: 'development', then: Joi.string().default(process.env['PDU_PASSWORD']) }
+        'NODE_ENV', { is: 'development', then: Joi.string().default(process.env['DEV_PASSWORD']) }
         )
       .when(
         'NODE_ENV', { is: 'WEBDUINO', then: Joi.string().default(process.env['WEBDUINO_PASSWORD']) }
