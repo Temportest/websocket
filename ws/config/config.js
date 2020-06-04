@@ -13,6 +13,9 @@ const envVarSchema = Joi.object().keys({
     )
     .when(
       'NODE_ENV', { is: 'NUWA', then: Joi.string().default(process.env['NUWA_HOST']) }
+    )
+    .when(
+      'NODE_ENV', { is: 'NUTN', then: Joi.string().default(process.env['NUTN_HOST']) }
     ),
     WS_USERNAME: Joi.string()
     .when(
@@ -23,6 +26,9 @@ const envVarSchema = Joi.object().keys({
     )
     .when(
       'NODE_ENV', { is: 'NUWA', then: Joi.string().default(process.env['NUWA_USERNAME']) }
+    )
+    .when(
+      'NODE_ENV', { is: 'NUTN', then: Joi.string().default(process.env['NUTN_USERNAME']) }
     ),
       WS_PASSWORD: Joi.string()
       .when(
@@ -33,6 +39,9 @@ const envVarSchema = Joi.object().keys({
       )
       .when(
         'NODE_ENV', { is: 'NUWA', then: Joi.string().default(process.env['NUWA_PASSWORD']) }
+      )
+      .when(
+        'NODE_ENV', { is: 'NUTN', then: Joi.string().default(process.env['NUTN_PASSWORD']) }
       )
   }).unknown().required();
 
