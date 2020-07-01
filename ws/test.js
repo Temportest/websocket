@@ -32,7 +32,7 @@ client.on('error', function (err) {
 })
 
 client.on('connect', function () {
-    client.publish('fml', '9', { qos: 0, retain: false })
+    client.publish('fml', '0.666666667,	0.26984127,	0.48029	,0.5303	,0.8571	,0.8571	,0.79823	,0.2038', { qos: 0, retain: false })
     console.log('client connected:' + clientId)
     
     setTimeout(()=>{client.end()}, 1000);
