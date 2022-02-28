@@ -32,6 +32,7 @@ http://127.0.0.1:1883  或是 mqtt://127.0.0.1
 - [ActorCloud](https://docs.actorcloud.io/zh/)
 - [MQTT基本應用](https://www.twblogs.net/a/5db43a54bd9eee310ee6b811)
 - [MQTT協議](https://www.twblogs.net/a/5db49906bd9eee310ee6bae1)
+- [解決網域Nginx代理wss](https://www.796t.com/article.php?id=254480)
 
 - [Web:Bit](https://webbit.webduino.io/blockly/?demo=default#lRQ2LLN26jDqG)
 - [Kebbi version](https://testkebbi.webduino.tw/blockly/?demo=default#a355aaKKjOm3m)
