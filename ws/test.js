@@ -32,7 +32,10 @@ client.on('error', function (err) {
 })
 
 client.on('connect', function () {
-    client.publish('nutn/fml', '0.666666667', { qos: 0, retain: false })
+    // Atten: forward -> forward 
+    // 2-3: down -> back 
+    // eye 4: up -> rotate
+    client.publish('nutn/fml', 'rotate', { qos: 0, retain: false })
     console.log('client connected:' + clientId)
     
     setTimeout(()=>{client.end()}, 1000);
